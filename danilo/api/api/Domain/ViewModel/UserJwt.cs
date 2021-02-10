@@ -3,7 +3,7 @@ using System;
 
 namespace api.Domain.ViewModel
 {
-    public record UserView
+    public record UserJwt
     {
         public int Id { get; set; }
 
@@ -11,5 +11,6 @@ namespace api.Domain.ViewModel
 
         public string Email { get; set; }
         public string Role { get; set; }
+        public string Token { get; set; }
     }
 }

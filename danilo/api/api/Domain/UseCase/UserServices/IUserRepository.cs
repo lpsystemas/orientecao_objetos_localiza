@@ -1,13 +1,9 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using api.Domain.Entities;
 using api.Domain.ViewModel;
-using api.Infra.Database;
-using Microsoft.EntityFrameworkCore;
 
-namespace api.Domain.UseCase.UserService
+namespace api.Domain.UseCase.UserServices
 {
     public interface IUserRepository
     {
@@ -18,5 +14,6 @@ namespace api.Domain.UseCase.UserService
         Task Save(User user);
         Task Delete(User user);
         Task<ICollection<UserView>> All();
+        Task<User> FindByEmailAndPassword(string email, string password);
     }
 }
